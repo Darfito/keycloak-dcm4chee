@@ -87,7 +87,22 @@ services:
           "DicomWeb": {
             "Enable": true,
             "PublicRoot": "/orthanc/dicom-web/"
+          },
+
+          "DicomModalities": {
+            "DCM4CHEE": {
+              "AET": "DCM4CHEE",{
+        "Host": "127.0.0.1",
+        "Port": 11112,
+        "Manufacturer": "Generic",
+        "AllowEcho": true,
+        "AllowFind": true,
+        "AllowMove": true,
+        "AllowStore": true}
+            }
           }
+
+
           // to use OHIF-plugin:  make sure to have a "OHIF" config and use "dicom-web" source
           //, "OHIF": {
           //  "DataSource": "dicom-web",
